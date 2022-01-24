@@ -1,0 +1,26 @@
+[package]
+name = "rust-64-bit-os"
+version = "0.1.0"
+authors = ["mark <m4kemav@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+bootloader = { version = "0.10.13", features = ["map_physical_memory"]}
+volatile = "0.4.5"
+x86_64 = "0.14.10"
+pic8259 = "0.10.1"
+uart_16550 = "0.2.13"
+linked_list_allocator = "0.10.4"
+pc-keyboard = "0.5.1"
+spin = "0.9.4"
+
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
