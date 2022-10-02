@@ -21,6 +21,9 @@ cargo run
 rustup component add rust-src llvm-tools-preview
 ```
 
+这个
+![img.png](doc/img1.png)
+
 ### Commands
 
 绑定环境
@@ -42,3 +45,5 @@ rustup component add rust-src
 cargo run
 ```
 
+
+> inspiration by https://os.phil-opp.com/
