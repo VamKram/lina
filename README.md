@@ -10,21 +10,20 @@
 
 ```sh
 cargo build
-```
 
-```sh
+# 运行
 cargo run
 ```
 
-如果
+如果出现这个报错
 ![img.png](doc/img.png)
 
 ```shell
-# 报错尝试
+# 报错尝试增加 llvm tools 到项目
 rustup component add rust-src llvm-tools-preview
 ```
 
-这个
+参考下这个问题 解决一些不同架构的思路
 ![img.png](doc/img1.png)
 
 ### Commands
@@ -35,13 +34,13 @@ rustup component add rust-src llvm-tools-preview
 cargo rustc -- -C link-args="-e __start -static -nostartfiles"
 ```
 
-**从源码编译 **
+** 从源码编译 **
 
 ```sh
 rustup component add rust-src
 ```
 
-**使用**
+** 使用 **
 
 
 ```sh
